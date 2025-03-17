@@ -388,6 +388,14 @@ hr{
     border-radius: 10px;
 }
 
+.art-dividers{
+    border: 7px solid #307848;
+    border-radius: 12px;
+    width: 45%;
+    height: 75%;
+    text-align: left;
+}
+
 
 
 /*buttons*/
