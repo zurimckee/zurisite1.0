@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+        <div class="myDiv">
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">where to find me</a></li>
+                    <li><a href="blog.html">writings</a></li>
+                    <li><a href="log.html">log</a></li>
+                </ul>
+            </nav>   
+        </div>
+        <div class="fade-in">
+            <br>
+            <style>
+                h1{
+                    border: 3px solid #307848;
+                    border-radius: 12px;
+                    position: center;
+                    width: 300px;
+                    margin: auto;
+                    color: #244930;
+                    font-size: 24px;
+                    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-style: oblique;
+                    background-image: linear-gradient(#307848, #6bbd6f); 
+                }
+
+                .log-title p{
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: bold;
+                    color: #244930;
+                }
+            </style>
+
+            <h1> site log </h1>
+            <br>
+
+            <div class="log-container">
+                <div class="log-title">
+                    <p><strong>march 2025</strong></p>
+                    
+                </div>
+                <div class="log-content">   
+                    <p>
+                         
+                        <small>03-15-2025</small><br>
+                        i want to leave this damn workshop so bad it's not even funny 
+                    </p>
+                    <hr>
+                    <p>
+                        <small> 3/16/2025</small><br>
+                        i'm trying to figure out how to make this log scroll like the other guy's log that i've modeled it off of. 
+                        i used the inspect thingy to look at his code and there was nothing on there about it but it was partially in 
+                        javascript so maybe that's why. but also, i feel like I could do it with the flex-box feature.
+                        antyways we'll figure it out.
+                    </p>
+                    <hr>
+                    <p>
+                        <small> 3/16/2025</small><br>
+                        i'm also considering making a different website to serve as my personal portfolio, mainly just because this
+                        one is a bit informal and also very green. even though it is my first website baby and i am very attatched to it,
+                        it'll probably just be my little personal artsy website for my essays, and to maybe host some of my graffiti pieces
+                        or crochet or something
+                    </p>
+                    <hr>
+                    <p>
+                        <small> 3/16/2025</small><br>
+                        the only part left that i have to do is the message input function for people to leave messages or whatever, and the only
+                        reason that i've left that until the end is because i have to learn like server side development for it to work and stuff 
+                        and that is a bigger task than i'm willing to take on at the moment. but i'll be starting this google cloud computing course 
+                        next week so hopefully i'll get some insight on how to do it then.
+                    </p>
+                    <hr>
+                    <p>
+                        <small> 3/16/2025</small><br>
+                        YAYY IT SCROLLED i guess that's what the overflow-y thing was for.
+                        only thing is, i want to change the way it looks...     
+                    </p>
+                    <hr>
+                    <p>
+                        <small> 3/16/2025</small><br>
+                        scrollbar changed!! only issue now is the fact that neocities, where my website is hosted, is acting up rn and not reflecting my
+                        css changes it's pissing me off!! im trying to show it off like pls.
+                    </p>
+                    <hr>
+                    <p>
+                        <small>3/16/2025</small><br>
+                        it looks weird right now because the month thing isn't centered or at the top but that gave me an idea. what if I added a feature
+                        where the months were on the side in a sidebar of sorts and you could click on them to jump to the journal entries for that month?
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--reverses journal entries-->
+        <script>
+            const logContent = document.querySelector('.log-content');
+            const entries = Array.from(logContent.querySelectorAll('p, hr'));
+            logContent.innerHTML = ''; // Clear current content
+            entries.reverse().forEach(entry => logContent.appendChild(entry)); // Append in reverse order
+    </script>
+        </script>
+    </body>
+</html>
