@@ -365,18 +365,18 @@ hr{
 
 
 
-.log-content p {
-    color:  #307848;
-    font-weight:600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.4px;
-    font-family:monospace;
-    text-align: left;
-    
-    
+    .log-content p {
+        color:  #307848;
+        font-weight:600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.4px;
+        font-family:monospace;
+        text-align: left;
+        
+        
 
-}
+    }
 
 ::-webkit-scrollbar{
     width: 10px;
