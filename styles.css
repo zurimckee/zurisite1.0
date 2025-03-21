@@ -388,12 +388,12 @@ hr{
     border-radius: 10px;
 }
 
-.art-dividers{
-    border: 7px solid #307848;
+.img-style2{
+    width: 100%; /* Adjust based on actual image size */
+    height: auto; /* Maintains aspect ratio */
     border-radius: 12px;
-    width: 45%;
-    height: 75%;
-    text-align: left;
+    margin: auto;
+    align-items: center;
 }
 
 
