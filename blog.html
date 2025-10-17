@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
 </head>
     <header>
         <title>
@@ -12,67 +12,84 @@
         </title>
     </header>
     <body>
-        <div class="myDiv">
-            <nav>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="projects.html">projects</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">where to find me</a></li>
-                    <li><a href="blog.html">writings</a></li>
-                    <li><a href="log.html">log</a></li>
-                    <li><a href="art.html">art</a></li>
-                </ul>
-            </nav>   
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">where to find me</a></li>
+                <li><a href="blog.html">writings</a></li>
+                <li><a href="log.html">log</a></li>
+                <li><a href="art.html">art</a></li>
+            </ul>
+        </nav>   
+
 
         <br>
         <div class="fade-in">
             <style>
                 h2{
-                    border: 3px solid  #307848;
                     border-radius: 12px;
                     text-align: center;
+                    color: #5C4B41;
                     width: 450px;
                     height: 65px;
                     padding-top: 13px;
                     margin: auto;
                     font-size: 25px;
-                    background-image: linear-gradient(#307848, #6bbd6f);}
+                    text-decoration: underline;}
             </style>
+            <style>
+                p {
+                    font-weight: 400;
+                }
+            </style>
+            <style>
+                .proj-card{
+                    border: 2px solid #8A8C6F;
+                    background: #C2C5AA;
+                    padding: 20px;
+                    border-radius: 12px;
+                    text-align:left;}
+            </style>
+
             <h2>essays, ramblings, and other things</h2>
             <br>
-            <div class="caption">
-                <style>
-                    p {
-                        font-weight: 400;
-                        text-decoration: underline;
-                    }
-                </style>
-                <p>
-                    an essay on the moral implications of individualism and the drawbacks of a lack of collectivism in american society. 
-                </p>
-                <div class="link">
-                    <li><a href="https://docs.google.com/document/d/1FCY6xP6GnMwFFub6cyFRsvREbkYRDsQrtFr1kxdBits/edit?usp=sharing">moral responsibility and collectivism</a></li>
+            <div class="project-grid">
+                <div class="proj-card">
+                    <div class="caption">
+                        <p>
+                            an essay on the moral implications of individualism and the drawbacks of a lack of collectivism in american society. 
+                        </p>
+                        <div class="link">
+                            <a href="https://docs.google.com/document/d/1FCY6xP6GnMwFFub6cyFRsvREbkYRDsQrtFr1kxdBits/edit?usp=sharing">moral responsibility and collectivism</a>
+                        </div>
+                    </div>
                 </div>
-
-                <br>
-                <p>
-                    research paper on the effects of institutional and systemic racism on the mental and physical health of african americans in the southeastern us.
-                </p>
-                <div class="link">
-                    <li><a href="https://drive.google.com/file/d/1zbiYee0-GnIpuIRDS8t2a5sLpo1B7QVP/view?usp=sharing">the effects of systemic racism on the health of african americans</a></li>
-                </div>    
                 
-                <br>
-                <p>
-                    on the path that i've travelled so far, and where i think it'll take me in the future.
-                </p>
-                <div class="link">
-                    <li><a href="https://docs.google.com/document/d/1cStB4QkA00p7IGtQbzYkBbZ1VOr24nSuP5hT0UqRUww/edit?usp=sharing">the path currently taken</a></li>
+                <div class="proj-card">
+                    <div class="caption">
+                        <p>
+                            research paper on the effects of institutional and systemic racism on the mental and physical health of african americans in the southeastern us.
+                        </p>
+                        <div class="link">
+                            <a href="https://drive.google.com/file/d/1zbiYee0-GnIpuIRDS8t2a5sLpo1B7QVP/view?usp=sharing">the effects of systemic racism on the health of african americans</a>
+                        </div>    
+                    </div>
                 </div>
-            </div>
             
+                
+                <div class="proj-card">
+                    <div class="caption">
+                        <p>
+                            on the path that i've travelled so far, and where i think it'll take me in the future.
+                        </p>
+                        <div class="link">
+                            <a href="https://docs.google.com/document/d/1cStB4QkA00p7IGtQbzYkBbZ1VOr24nSuP5hT0UqRUww/edit?usp=sharing">the path currently taken</a>
+                        </div>
+                    </div>
+                </div>
+            </div>        
         </div>
     </body>
 </html>

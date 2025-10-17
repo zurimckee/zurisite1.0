@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
 </head>
     <header>
         <title>
@@ -12,106 +12,151 @@
         </title>
     </header>
     <body>
-        <div class="myDiv">
-            <nav>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="projects.html">projects</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">where to find me</a></li>
-                    <li><a href="blog.html">writings</a></li>
-                    <li><a href="log.html">log</a></li>
-                    <li><a href="art.html">art</a></li>
-                </ul>
-            </nav>   
-        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">where to find me</a></li>
+                <li><a href="blog.html">writings</a></li>
+                <li><a href="log.html">log</a></li>
+                <li><a href="art.html">art</a></li>
+            </ul>
+        </nav>
     
         <div class="fade-in">
             <style>
             h1 {
-                border: 3px solid  #307848;
                 border-radius: 12px;
                 text-align: center;
                 width: 450px;
+                color: #5C4B41;
                 height: 65px;
                 margin: auto;
-                background-image: linear-gradient(#307848, #6bbd6f);}
+                text-decoration: underline;}
                 </style>
             
             <br>
             <h1>projects</h1>
             <style> 
-                h2{ border: 3px solid #307848;
+                h2{ 
                 border-radius: 12px;
                 position: center;
+                color: #5C4B41;
+                background-color: #B6AD90;
                 width: 300px;
                 margin: auto;}
             </style>
             <br>
             <br>
+        
             
-            <h2>tech stack</h2>
-            <br>
-            <div class="shield-style">
-                <img alt="python badge" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=6bbd6f&color=307848">
-                <img alt="java badge" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=6bbd6f&color=307848">
-                <img alt="javafx badge" src="https://img.shields.io/badge/javafx-%23FF0000.svg?style=for-the-badge&logo=javafx&logoColor=6bbd6f&color=307848">            
-                <img alt="html badge" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=6bbd6f&color=307848">
-                <img alt="css badge" src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=6bbd6f&color=307848">
-                <img alt="json badge" src="https://img.shields.io/badge/JSON-000?style=for-the-badge&logo=json&logoColor=6bbd6f&color=307848">
-                <img alt="markdown badge" src="https://img.shields.io/badge/Markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=6bbd6f&color=307848">
-                <img alt="figma badge" src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=6bbd6f&color=307848"> 
-                <img alt="github badge" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=6bbd6f&color=307848">
-                <img alt="git badge" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=6bbd6f&color=307848">
-            </div>        
-
-            <br>
+            <h2>python</h2>
             <div class="project-grid">
-                <h2>python</h2>
-                <br>
                 <div class="project-card">
+                    <h3> spotify search</h3>
                     <h4>
-                        spotify search
+                        python • spotify api • flask
                         <p>
-                            uses a search engine to prompt the user for a song, album, or artist, 
-                            then pulls from spotify a link to the song, track, or artist.
+                            i used the Spotify API to power a search engine meant to prompt the user 
+                            for a song, album, or artist, then pulled from spotify a link to the song, track, or artist.
+                            currently working on making a gui for it using flask.
                         </p>
-                        <button onclick=location.href="https://github.com/zurimckee/projbyzuri/tree/main/python%20spotify%20proj" target="_blank"> &#128205; </button>
+                        <button onclick=location.href="https://github.com/zurimckee/spotipi" target="_blank"> learn more </button>
                     </h4>
                 </div>
-                <br>
-                <br>
+                
                 <div class="project-card">  
+                    <h3> wiki search engine</h3>
                     <h4>
-                        wiki search engine
+                        python • json
                         <p>
-                            created a simple search engine to comb through wikipedia pages and pulls out 
+                            i created a simple search engine to comb through wikipedia pages and pulls out 
                             a specific one based on criteria and keyword/s provided by the user.
                         </p>
-                        <button onclick=location.href="https://github.com/zurimckee/projbyzuri/tree/main/search%20proj" target="_blank"> &#128205; </button>
-      
+                        <button onclick=location.href="https://github.com/zurimckee/pysearch" target="_blank"> learn more </button>
                     </h4>
                 </div>            
-                <br>
-                <br>
+                  
                 <div class="project-card">
+                    <h3>that damn dog</h3>
                     <h4>
-                        that damn dog
+                        python • pillow
                         <p>
-                            image manipulation - messed with the rgb values of the individual pixels of an 
+                            first work with image manipulation, messed with the rgb values of the individual pixels of an 
                             image of a dog to make a couple of diy filters.
                         </p>
-                        <button onclick=location.href="https://github.com/zurimckee/projbyzuri/tree/main/that%20dog%20py" target="_blank"> &#128205; </button>
+                        <button onclick=location.href="https://github.com/zurimckee/thatdamndog" target="_blank">learn more </button>
                     </h4>
                 </div>    
-                <br>
-                <br>
-                <h2>ux/ui development</h2> 
-                <br>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2> java </h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3> memory matching game</h3>
+                    <h4>
+                        java • javafx
+                        <p>
+                             a memory matching game using Java and JavaFX as my final project for a java course. 
+                             the game features a grid of interactive cards, level navigation, and responsive animations. 
+                             utilizing animationtimer for card flip timing and event handling for user interactions, 
+                        </p>
+                        <button onclick=location.href="https://github.com/zurimckee/javamemorygame" target="_blank"> learn more </button>
+                    </h4>
+                </div>
+                <div class="project-card">
+                    <h3> basic budget calculator</h3>
+                    <h4>
+                        java • javafx
+                        <p>
+                            created a java application that also used javafx libraries and frameworks to make an interface 
+                            and fully functional program allowing a user to input their budget, transactions, and other personal 
+                            information. also can output a formatted document with the budget report and transaction report
+                        </p>
+                        <button onclick=location.href=" https://github.com/zurimckee/javabudgetcalc" target="_blank">learn more  </button>
+                    </h4>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2> web development </h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3> zurisite 1.0</h3>
+                    <h4>
+                        html • css • un poco javascript
+                        <p>
+                            my first website ever! made with html and css, hosted on netify. 
+                            superrrr basic but i'm very proud of it.
+                        </p>
+                        <button onclick=location.href="https://projbyzuri.netlify.app/" target="_blank"> learn more </button>
+                    </h4>
+                </div>
+                <div class="project-card">
+                    <h3> professional site (in progress)</h3>
+                    <h4>
+                        html • css • un poco javascript
+                        <p>
+                            currently working on a more professional portfolio site to showcase my skills and projects 
+                            in a more formal way. used a youtube video so it kind of sucks but we're working on it!
+                        </p>
+                        <button onclick=location.href="https://zurimckeepf.netlify.app/" target="_blank">learn more </button>
+                    </h4>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2>ux/ui development</h2> 
+            <div class="project-grid">
                 <div class="project-card">
                     <h3> bookit! </h3>
                     <h4>
-                        honorable mention to figma and mural
+                        figma • mural
                         <details>
                             <summary>
                                 <p>
