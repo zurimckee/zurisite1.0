@@ -15,9 +15,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">home</a></li>
-                <li><a href="projects.html">projects</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="contact.html">where to find me</a></li>
+                <li><a href="projects.html">projects</a></li>
                 <li><a href="writings.html">writings</a></li>
                 <li><a href="log.html">log</a></li>
                 <li><a href="art.html">art</a></li>
@@ -25,156 +25,194 @@
         </nav>
         <svg class="nav-divider" viewBox="0 0 1200 20" xmlns="http://www.w3.org/2000/svg">
             <path d="M0,10 Q30,0 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10" 
-                stroke="#A68A64" stroke-width="4" fill="none"/>
+                stroke="#666D96" stroke-width="4" fill="none"/>
         </svg>
-    
-        <div class="fade-in">
+
+        <div class="fade-in"></div>
             <style>
-            h1 {
-                border-radius: 12px;
-                text-align: center;
-                width: 450px;
-                color: #5C4B41;
-                height: 65px;
-                margin: auto;
-                text-decoration: underline;}
-                </style>
-            
-            <br>
-            <h1>projects</h1>
-            <style> 
-                h2{ 
-                border-radius: 12px;
-                position: center;
-                color: #5C4B41;
-                background-color: #B6AD90;
-                width: 300px;
-                margin: auto;}
+                body {
+                    font-family: 'Segoe UI';
+                    background: #f5f3eb;
+                    padding: 2rem;
+                    margin: 0;
+                }
             </style>
-            <br>
-            <br>
-        
+
+
             
-            <h2>python</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3> spotify search</h3>
-                    <h4>
-                        python • spotify api • flask
-                        <p>
-                            used the spotify API to power a search engine meant to prompt the user 
-                            for a song, album, or artist, then pulled from spotify a link to the song, track, or artist.
-                            currently working on making a gui for it using flask.
-                        </p>
-                        <button onclick=location.href="https://github.com/zurimckee/spotipi" target="_blank"> learn more </button>
-                    </h4>
-                </div>
                 
-                <div class="project-card">  
-                    <h3> wiki search engine</h3>
-                    <h4>
-                        python • json • wikimedia api
-                        <p>
-                            created a simple search engine to comb through wikipedia pages and pulls out 
-                            a specific one based on criteria and keyword/s provided by the user.
-                        </p>
-                        <button onclick=location.href="https://github.com/zurimckee/pysearch" target="_blank"> learn more </button>
-                    </h4>
-                </div>            
-                  
-                <div class="project-card">
-                    <h3>that damn dog</h3>
-                    <h4>
-                        python • pillow
-                        <p>
-                            first work with image manipulation, messed with the rgb values of the individual pixels of an 
-                            image of a dog to make a couple of diy filters.
-                        </p>
-                        <button onclick=location.href="https://github.com/zurimckee/thatdamndog" target="_blank">learn more </button>
-                    </h4>
-                </div>    
+            <div class="filter-bar" id="filters">
+                <button class="filter-btn active" data-filter="all">all</button>
+                <button class="filter-btn" data-filter="python">python</button>
+                <button class="filter-btn" data-filter="web">web</button>
+                <button class="filter-btn" data-filter="java">java</button>
+                <button class="filter-btn" data-filter="uiux">ui/ux</button>
             </div>
-            <br>
-            <hr>
-            <br>
-            <h2> java </h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3> memory matching game</h3>
-                    <h4>
-                        java • javafx
-                        <p>
-                             a memory matching game using Java and JavaFX as my final project for a java course. 
-                             the game features a grid of interactive cards, level navigation, and responsive animations. 
-                             utilizing animationtimer for card flip timing and event handling for user interactions, 
-                        </p>
-                        <button onclick=location.href="https://github.com/zurimckee/javamemorygame" target="_blank"> learn more </button>
-                    </h4>
+            
+            <p class="hint">hover to flip</p>
+            
+            <div class="cards-grid" id="grid">
+            
+                <!-- =============================================
+                    CARD 1 — Spotify Search
+                    To add a background image to the FRONT face:
+                    style="background-image: url('your-image.jpg')"
+                    To add to the BACK face, do the same on that div.
+                    ============================================= -->
+                <div class="card-wrap" data-tags="python">
+                    <div class="card-inner">
+                        <div class="card-face" style="background-image: url('your-spotify-image.jpg')">
+                            <span class="card-tag">python • api</span>
+                            <p class="card-name">spotify search</p>
+                            <span class="card-stack">python · spotify api · flask</span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">used the spotify API to power a search engine meant to prompt the user for a song, album, or artist, then pulled from spotify a link to the song, track, or artist. currently working on making a gui for it using flask.</p>
+                            <a class="github-link" href="https://github.com/yourusername/spotify-search">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                view on github
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3> basic budget calculator</h3>
-                    <h4>
-                        java • javafx
-                        <p>
-                            created a java application that also used javafx libraries and frameworks to make an interface 
-                            and fully functional program allowing a user to input their budget, transactions, and other personal 
-                            information. also can output a formatted document with the budget report and transaction report
-                        </p>
-                        <button onclick=location.href=" https://github.com/zurimckee/javabudgetcalc" target="_blank">learn more  </button>
-                    </h4>
+            
+                <div class="card-wrap" data-tags="python">
+                    <div class="card-inner">
+                        <div class="card-face" style="background-image: url('your-wiki-image.jpg')">
+                            <span class="card-tag">python • api</span>
+                            <p class="card-name">wiki search engine</p>
+                            <span class="card-stack">python · json · wikimedia api</span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">created a simple search engine to comb through wikipedia pages and pulls out a specific one based on criteria and keyword/s provided by the user.</p>
+                            <a class="github-link" href="https://github.com/yourusername/wiki-search">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                view on github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="card-wrap" data-tags="python">
+                    <div class="card-inner">
+                        <div class="card-face">
+                            <span class="card-tag">python</span>
+                            <p class="card-name">that damn dog</p>
+                            <span class="card-stack">python • pillow </span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">work with image manipulation, messed with the rgb values of the individual pixels of an image of a dog to make a couple of diy filters.</p>
+                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                view on github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrap" data-tags="java">
+                    <div class="card-inner">
+                        <div class="card-face">
+                            <span class="card-tag">java</span>
+                            <p class="card-name">memory matching games</p>
+                            <span class="card-stack">java • javafx </span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">a memory matching game featuring a grid of interactive cards, level navigation, and responsive animations.</p>
+                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                view on github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrap" data-tags="java">
+                    <div class="card-inner">
+                        <div class="card-face">
+                            <span class="card-tag">java</span>
+                            <p class="card-name">memory matching games</p>
+                            <span class="card-stack">java • javafx </span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">a program allowing a user to input their budget, transactions, and other personal information. also can output a formatted document with the budget report and transaction report</p>
+                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                view on github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrap" data-tags="web">
+                    <div class="card-inner">
+                        <div class="card-face">
+                            <span class="card-tag">web dev</span>
+                            <p class="card-name">zurisite1.0</p>
+                            <span class="card-stack">html • css • javascript </span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">my first website ever! made with html and css, hosted on neocities.it was so green please overlook lol. superrrr basic but i'm very proud of it.</p>
+                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                view on github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrap" data-tags="web">
+                    <div class="card-inner">
+                        <div class="card-face">
+                            <span class="card-tag">web dev</span>
+                            <p class="card-name">professional site</p>
+                            <span class="card-stack">html • css • javascript </span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">currently working on a more professional portfolio site to showcase my skills and projects in a more formal way. used a youtube video so it kind of sucks but we're working on it!</p>
+                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                view on github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrap" data-tags="uiux">
+                    <div class="card-inner">
+                        <div class="card-face">
+                            <span class="card-tag">ui/ux dev</span>
+                            <p class="card-name">bookit!</p>
+                            <span class="card-stack">figma • mural</span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">a mockup of a website made during a hackathon for the scientific research center of an african university. props to my partner amaya!</p>
+                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                view on github
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br>
-            <hr>
-            <br>
-            <h2> web development </h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3> zurisite 1.0</h3>
-                    <h4>
-                        html • css • un poco javascript
-                        <p>
-                            my first website ever! made with html and css, hosted on neocities. 
-                            superrrr basic but i'm very proud of it.
-                        </p>
-                        <button onclick=location.href="https://projbyzuri.neocities.org/" target="_blank"> learn more </button>
-                    </h4>
-                </div>
-                <div class="project-card">
-                    <h3> professional site (in progress)</h3>
-                    <h4>
-                        html • css • un poco javascript
-                        <p>
-                            currently working on a more professional portfolio site to showcase my skills and projects 
-                            in a more formal way. used a youtube video so it kind of sucks but we're working on it!
-                        </p>
-                        <button onclick=location.href="https://zurimckeepf.netlify.app/" target="_blank">learn more </button>
-                    </h4>
-                </div>
-            </div>
-            <br>
-            <hr>
-            <br>
-            <h2>ux/ui development</h2> 
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3> bookit! </h3>
-                    <h4>
-                        figma • mural
-                        <details>
-                            <summary>
-                                <p>
-                                    a mockup of a website made during a hackathon for the scientific research center of an african university. the website is meant to be as interactive and user friendly as possible, with an interactive calendar and easy to find icons for users to navigate quickly and easily. props to my partner amaya!
-                                </p>        
-                            </summary>
-                            <samp>
-                                
-                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/BtfmQGlGwOHvZrkhdOgjHx/Booking-Site?node-id=4-2&p=f&scaling=contain&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
-                            </samp>
-                        </details>
-                    </h4> 
-                </div>                
-            </div>
-        </div>   
+        </div>
+        
+        <script>
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.dataset.filter;
+                    document.querySelectorAll('.card-wrap').forEach(card => {
+                    const tags = card.dataset.tags || '';
+                    if (filter === 'all' || tags.includes(filter)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
