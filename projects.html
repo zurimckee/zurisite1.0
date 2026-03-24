@@ -5,47 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
     <header>
         <title>
             projects
         </title>
-    </header>
-    <body>
-        <nav>
-            <ul>
+                <nav id="desktop-nav">
+            <ul class="nav-links">
                 <li><a href="index.html">home</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="contact.html">where to find me</a></li>
                 <li><a href="projects.html">projects</a></li>
                 <li><a href="writings.html">writings</a></li>
-                <li><a href="log.html">log</a></li>
                 <li><a href="art.html">art</a></li>
+                <li><a href="log.html">log</a></li>
             </ul>
+        </nav> 
+        <nav id="hamburger-nav">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <ul>
+                        <li><a href="index.html" onclick="toggleMenu()">home</a></li>
+                        <li><a href="contact.html" onclick="toggleMenu()">about</a></li>
+                        <li><a href="projects.html" onclick="toggleMenu()">contact</a></li>
+                        <li><a href="writings.html" onclick="toggleMenu()">writings</a></li>
+                        <li><a href="art.html" onclick="toggleMenu()">art</a></li>
+                        <li><a href="log.html" onclick="toggleMenu()">log</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <svg class="nav-divider" viewBox="0 0 1200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,10 Q30,0 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10" 
-                stroke="#666D96" stroke-width="4" fill="none"/>
-        </svg>
-
+    </header>
+    <body>
         <div class="fade-in"></div>
             <style>
                 body {
                     font-family: 'Segoe UI';
-                    background: #f5f3eb;
                     padding: 2rem;
                     margin: 0;
                 }
+                h1 {
+                    border-radius: 12px;
+                    text-align: center;
+                    width: 450px;
+                    height: 65px;
+                    margin: auto;
+                    text-decoration: underline;
+                    }
             </style>
+            <br>
 
 
-            
+            <h1> projects </h1>
                 
             <div class="filter-bar" id="filters">
                 <button class="filter-btn active" data-filter="all">all</button>
                 <button class="filter-btn" data-filter="python">python</button>
                 <button class="filter-btn" data-filter="web">web</button>
                 <button class="filter-btn" data-filter="java">java</button>
+                <button class="filter-btn" data-filter="aiml">ai/ml</button>
                 <button class="filter-btn" data-filter="uiux">ui/ux</button>
             </div>
             
@@ -61,14 +85,14 @@
                     ============================================= -->
                 <div class="card-wrap" data-tags="python">
                     <div class="card-inner">
-                        <div class="card-face" style="background-image: url('your-spotify-image.jpg')">
+                        <div class="card-face" style="background-image: url('assets/projimages/spotipi.png')">
                             <span class="card-tag">python • api</span>
                             <p class="card-name">spotify search</p>
                             <span class="card-stack">python · spotify api · flask</span>
                         </div>
                         <div class="card-face card-back">
                             <p class="card-desc">used the spotify API to power a search engine meant to prompt the user for a song, album, or artist, then pulled from spotify a link to the song, track, or artist. currently working on making a gui for it using flask.</p>
-                            <a class="github-link" href="https://github.com/yourusername/spotify-search">
+                            <a class="github-link" href="https://github.com/zurimckee/spotipi">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                                 view on github
                             </a>
@@ -78,14 +102,14 @@
             
                 <div class="card-wrap" data-tags="python">
                     <div class="card-inner">
-                        <div class="card-face" style="background-image: url('your-wiki-image.jpg')">
+                        <div class="card-face" style="background-image: url('assets/projimages/wiki.png')">
                             <span class="card-tag">python • api</span>
                             <p class="card-name">wiki search engine</p>
                             <span class="card-stack">python · json · wikimedia api</span>
                         </div>
                         <div class="card-face card-back">
                             <p class="card-desc">created a simple search engine to comb through wikipedia pages and pulls out a specific one based on criteria and keyword/s provided by the user.</p>
-                            <a class="github-link" href="https://github.com/yourusername/wiki-search">
+                            <a class="github-link" href="https://github.com/zurimckee/pysearch">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                                 view on github
                             </a>
@@ -95,14 +119,14 @@
             
                 <div class="card-wrap" data-tags="python">
                     <div class="card-inner">
-                        <div class="card-face">
+                        <div class="card-face" style="background-image: url('assets/projimages/screamodog.png')">
                             <span class="card-tag">python</span>
                             <p class="card-name">that damn dog</p>
                             <span class="card-stack">python • pillow </span>
                         </div>
                         <div class="card-face card-back">
                             <p class="card-desc">work with image manipulation, messed with the rgb values of the individual pixels of an image of a dog to make a couple of diy filters.</p>
-                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                            <a class="github-link" href="https://github.com/zurimckee/thatdamndog">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                                 view on github
                             </a>
@@ -110,16 +134,33 @@
                     </div>
                 </div>
 
+                <div class="card-wrap" data-tags="aiml">
+                    <div class="card-inner">
+                        <div class="card-face" style="background-image: url('assets/projimages/aggiebot.png')">
+                            <span class="card-tag">ai/ml</span>
+                            <p class="card-name">aggiebot</p>
+                            <span class="card-stack">gemini api • python • streamlit </span>
+                        </div>
+                        <div class="card-face card-back">
+                            <p class="card-desc">an ai assistant meant to be an expert on all things nca&t.</p>
+                            <a class="github-link" href="https://aggiebot.streamlit.app/">
+                                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                                live demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card-wrap" data-tags="java">
                     <div class="card-inner">
-                        <div class="card-face">
+                        <div class="card-face" style="background-image: url(assets/projimages/memorygame.png)">
                             <span class="card-tag">java</span>
-                            <p class="card-name">memory matching games</p>
+                            <p class="card-name">memory matching game</p>
                             <span class="card-stack">java • javafx </span>
                         </div>
                         <div class="card-face card-back">
                             <p class="card-desc">a memory matching game featuring a grid of interactive cards, level navigation, and responsive animations.</p>
-                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                            <a class="github-link" href="https://github.com/zurimckee/javamemorygame">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                                 view on github
                             </a>
@@ -129,14 +170,14 @@
 
                 <div class="card-wrap" data-tags="java">
                     <div class="card-inner">
-                        <div class="card-face">
+                        <div class="card-face" style="background-image: url(assets/projimages/budgettracker.png)">
                             <span class="card-tag">java</span>
-                            <p class="card-name">memory matching games</p>
+                            <p class="card-name">budget tracker</p>
                             <span class="card-stack">java • javafx </span>
                         </div>
                         <div class="card-face card-back">
                             <p class="card-desc">a program allowing a user to input their budget, transactions, and other personal information. also can output a formatted document with the budget report and transaction report</p>
-                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                            <a class="github-link" href="https://github.com/zurimckee/javabudgetcalc">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                                 view on github
                             </a>
@@ -146,16 +187,16 @@
 
                 <div class="card-wrap" data-tags="web">
                     <div class="card-inner">
-                        <div class="card-face">
+                        <div class="card-face" style="background-image: url(assets/projimages/zurisite1.0.png)">
                             <span class="card-tag">web dev</span>
                             <p class="card-name">zurisite1.0</p>
                             <span class="card-stack">html • css • javascript </span>
                         </div>
                         <div class="card-face card-back">
                             <p class="card-desc">my first website ever! made with html and css, hosted on neocities.it was so green please overlook lol. superrrr basic but i'm very proud of it.</p>
-                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                            <a class="github-link" href="https://projbyzuri.neocities.org/">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                                view on github
+                                live demo
                             </a>
                         </div>
                     </div>
@@ -163,16 +204,16 @@
 
                 <div class="card-wrap" data-tags="web">
                     <div class="card-inner">
-                        <div class="card-face">
+                        <div class="card-face" style="background-image: url(assets/projimages/realdealport.png)">
                             <span class="card-tag">web dev</span>
-                            <p class="card-name">professional site</p>
+                            <p class="card-name">realdealportfolio</p>
                             <span class="card-stack">html • css • javascript </span>
                         </div>
                         <div class="card-face card-back">
                             <p class="card-desc">currently working on a more professional portfolio site to showcase my skills and projects in a more formal way. used a youtube video so it kind of sucks but we're working on it!</p>
-                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                            <a class="github-link" href="https://zurimckeepf.netlify.app/">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                                view on github
+                                live demo
                             </a>
                         </div>
                     </div>
@@ -180,23 +221,23 @@
 
                 <div class="card-wrap" data-tags="uiux">
                     <div class="card-inner">
-                        <div class="card-face">
-                            <span class="card-tag">ui/ux dev</span>
+                        <div class="card-face" style="background-image: url(assets/projimages/bookit.png)">
+                            <span class="card-tag">ui/ux </span>
                             <p class="card-name">bookit!</p>
                             <span class="card-stack">figma • mural</span>
                         </div>
                         <div class="card-face card-back">
                             <p class="card-desc">a mockup of a website made during a hackathon for the scientific research center of an african university. props to my partner amaya!</p>
-                            <a class="github-link" href="https://github.com/yourusername/your-project">
+                            <a class="github-link" href="https://www.figma.com/proto/BtfmQGlGwOHvZrkhdOgjHx/Booking-Site?node-id=4-2&t=fIy3mfHo9fjS4lPm-1">
                                 <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                                view on github
+                                live demo
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+        <script src="script.js"></script>
         <script>
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.addEventListener('click', () => {

@@ -6,28 +6,44 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
     <header>
         <title>
             where to find me
         </title>
-    <body>
-        <nav>
-            <ul>
+                <nav id="desktop-nav">
+            <ul class="nav-links">
                 <li><a href="index.html">home</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="contact.html">where to find me</a></li>
                 <li><a href="projects.html">projects</a></li>
                 <li><a href="writings.html">writings</a></li>
-                <li><a href="log.html">log</a></li>
                 <li><a href="art.html">art</a></li>
+                <li><a href="log.html">log</a></li>
             </ul>
+        </nav> 
+        <nav id="hamburger-nav">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <ul>
+                        <li><a href="index.html" onclick="toggleMenu()">home</a></li>
+                        <li><a href="about.html" onclick="toggleMenu()">about</a></li>
+                        <li><a href="projects.html" onclick="toggleMenu()">projects</a></li>
+                        <li><a href="writings.html" onclick="toggleMenu()">writings</a></li>
+                        <li><a href="art.html" onclick="toggleMenu()">art</a></li>
+                        <li><a href="log.html" onclick="toggleMenu()">log</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <svg class="nav-divider" viewBox="0 0 1200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,10 Q30,0 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10" 
-                stroke="#666D96" stroke-width="4" fill="none"/>
-        </svg>
-
+    </header>
+    <body>
         <br>
         <br>
         <div class="fade-in">
@@ -62,5 +78,6 @@
             </div>
 
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

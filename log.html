@@ -5,28 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
     <header>
         <title>
             log
         </title>
-    </header>
-    <body>
-        <nav>
-            <ul>
+        <nav id="desktop-nav">
+            <ul class="nav-links">
                 <li><a href="index.html">home</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="contact.html">where to find me</a></li>
                 <li><a href="projects.html">projects</a></li>
                 <li><a href="writings.html">writings</a></li>
-                <li><a href="log.html">log</a></li>
                 <li><a href="art.html">art</a></li>
+                <li><a href="log.html">log</a></li>
             </ul>
+        </nav> 
+        <nav id="hamburger-nav">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <ul>
+                        <li><a href="index.html" onclick="toggleMenu()">home</a></li>
+                        <li><a href="about.html" onclick="toggleMenu()">about</a></li>
+                        <li><a href="contact.html" onclick="toggleMenu()">contact</a></li>
+                        <li><a href="projects.html" onclick="toggleMenu()">projects</a></li>
+                        <li><a href="writings.html" onclick="toggleMenu()">writings</a></li>
+                        <li><a href="art.html" onclick="toggleMenu()">art</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <svg class="nav-divider" viewBox="0 0 1200 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,10 Q30,0 60,10 T120,10 T180,10 T240,10 T300,10 T360,10 T420,10 T480,10 T540,10 T600,10 T660,10 T720,10 T780,10 T840,10 T900,10 T960,10 T1020,10 T1080,10 T1140,10 T1200,10" 
-                stroke="#666D96" stroke-width="4" fill="none"/>
-        </svg>
+    </header>
         <div class="fade-in">
             <br>
             <style>
@@ -153,6 +168,19 @@
                         changed the color scheme again lol, changed the about page picture and layout, added some more to the art page but i still have to fix the layout on that im thinking grid.
                         additionally, im fixing the project page it looks really boring and i fixed the landing page. im lowk avoiding react because it never works when i try to use it but my 
                         boss this summer thinks that i know how to use it soooo im gonna have to conquer that sooner than later. 
+                    </p>
+                    <hr>
+                    <p>
+                        <small>03.23.2026</small><br>
+                        changed landing page (folders), nav bar, got rid of that dumb scribble under it, added a hamburger menu, fixed the pills and added images/links/descriptions for all projects. 
+                        i might change my picture for about if i can find a good one and i want to improve the layout of the writings page make it less boring and cubic. lastly i kind of want to add 
+                        a dynamic background effect at least for the landing page but idk what to add and i don't want to use react. also i think i need to either stop working on this or pull back 
+                        temporarily because im getting behind on work. 
+                    </p>
+                    <hr>
+                    <p>
+                        <small>03.23.2026</small><br>
+                        anyways this has been really fun im proud of how far ive come since zurisite1.0 and im excited to see where this goes in the future :))
                     </p>
                 </div>
             </div>
