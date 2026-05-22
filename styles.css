@@ -269,16 +269,71 @@ hr{
     height: auto;
 }
 
-.contact-container{
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin: 35px auto;
+    max-width: 600px;
+    width: fit-content;
+}
+
+.contact-container {
     width: 250px;
     height: auto;
-    margin: 35px auto;
+    margin: 0;                          /* was 35px auto */
     padding: 20px;
     background: #E8E5E2;
     border-radius: 15px;
     box-shadow: 7px 7px 25px rgba(0, 0, 0, 0.1);
 }
 
+.form-container {
+    width: 250px;
+    padding: 20px;
+    background: #E8E5E2;
+    border-radius: 15px;
+    box-shadow: 7px 7px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container input,
+.form-container textarea {
+    color: #7878A2;
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+    background: #f5f3f1;
+    font-family: inherit;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-container button {
+    align-self: center;
+    padding: 3px 10px;
+    color: #3d4367;
+    border: none;
+    background-color:#E8E5E2;
+    font-family: inherit;
+    font-size: 1 rem;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.form-container button:hover {
+    text-decoration: underline;
+}
 
 /* burger menu */
 

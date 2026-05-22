@@ -57,26 +57,38 @@
                     text-decoration: underline;}
             </style>
             <h1>socials</h1>
-            <div class="contact-container">
-                <p>
-                    <a href="https://github.com/zurimckee" target="_blank">
-                        <i class="fa-brands fa-github"></i> 
-                    </a>
-                    <a href="https://www.linkedin.com/in/zuri-mckee/" target="_blank"> 
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://letterboxd.com/zurikeemc/" target="_blank">
-                        <i class="fa-solid fa-clapperboard"></i>
-                    </a>
-                    <a href="https://www.pinterest.com/zurikeemc/" target="_blank">
-                        <i class="fa-brands fa-pinterest"></i>
-                    </a>
-                    <a href="https://open.spotify.com/user/awesomekid117?si=40be587d263d423f" target="_blank">
-                        <i class="fa-brands fa-spotify"></i>
-                    </a>
-                </p>
-            </div>
+            <div class="contact-wrapper">
+                <div class="contact-container">
+                    <p>
+                        <a href="https://github.com/zurimckee" target="_blank">
+                            <i class="fa-brands fa-github"></i> 
+                        </a>
+                        <a href="https://www.linkedin.com/in/zuri-mckee/" target="_blank"> 
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://letterboxd.com/zurikeemc/" target="_blank">
+                            <i class="fa-solid fa-clapperboard"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/zurikeemc/" target="_blank">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                        <a href="https://open.spotify.com/user/awesomekid117?si=40be587d263d423f" target="_blank">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                    </p>
+                </div>
 
+                <div class="form-container">
+                    <form name="contact" method="POST" data-netlify="true">
+                        <p>send me a message!</p>
+                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="text" name="name" placeholder="name" required />
+                        <input type="email" name="email" placeholder="email" required />
+                        <textarea name="message" placeholder="your message" rows="4" required></textarea>
+                        <button type="submit">send</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>

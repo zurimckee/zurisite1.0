@@ -9,3 +9,9 @@
 
     }
 }
+
+.contact-wrapper{
+    flex-direction: row;
+    align-items: center;
+}
+
