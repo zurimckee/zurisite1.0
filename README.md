@@ -18,5 +18,5 @@ im trying to pivot to another project but i keep having more ideas so ill probab
  - [X] CSS
  - [X] JavaScript 
 
-## check out link! 
+## check it out! 
 https://projbyzuri.netlify.app/
