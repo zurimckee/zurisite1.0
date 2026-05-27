@@ -16,7 +16,7 @@ im trying to pivot to another project but i keep having more ideas so ill probab
 ## tech stack 
  - [X] HTML
  - [X] CSS
- - [ ] JavaScript 
+ - [X] JavaScript 
 
 ## check out link! 
 https://projbyzuri.netlify.app/
