@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/favicon.ico">
     
 </head>
-    <body class="fade-in">
+<header>
+    <title>
+        projbyzuri
+    </title>
+</header>
+    <body>
         <style>
             .card-tag {
                 font-family: 'Segoe UI', sans-serif;
@@ -26,13 +32,15 @@
             }
 
         </style>
-        
+        <div class="music-player">
+            <audio id="music" autoplay muted loop>
+                <source src="assets/songs/pinknwhite.flac" type="audio/flac">
+            </audio>
+            <button id="play-pause" onclick="toggleMusic()">
+                <img id="play-icon" src="assets/voldown.png" alt="Play">
+            </button>
+        </div>
 
-        <header>
-            <title>
-                projbyzuri
-            </title>
-        </header>
         <img src="assets/myname.png" alt="name sticker" class="name-img">
 
         <div class="home-grid">
@@ -74,5 +82,5 @@
             </a>
         </div>
     </body>
-
+    <script src="script.js"></script>
 </html>

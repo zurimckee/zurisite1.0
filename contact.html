@@ -45,7 +45,7 @@
     </header>
     <body>
         <br>
-        <br>
+
         <div class="fade-in">
             <style>
                 h1 {
@@ -56,6 +56,14 @@
                     margin: auto;
                     text-decoration: underline;}
             </style>
+            <div class="music-player">
+                <audio id="music" autoplay muted loop>
+                    <source src="assets/songs/cugirl.flac" type = "audio/flac">
+                </audio>
+                <button id="play-pause" onclick="toggleMusic()">
+                    <img id="play-icon" src="assets/voldown.png" alt="Play">
+                </button>
+            </div>
             <h1>socials</h1>
             <div class="contact-wrapper">
                 <div class="contact-container">

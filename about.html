@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/favicon.ico">
     <link rel="stylesheet" href="mediaqueries.css">
@@ -44,7 +45,7 @@
     </header>   
     <body>
 
-        <div class="fade-in"> 
+        <div> 
             <style>
             h1 {
                 border-radius: 12px;
@@ -55,6 +56,15 @@
                 text-decoration: underline;
                 }
             </style>
+            <div class="music-player">
+                <audio id="music" autoplay muted loop>
+                    <source src="assets/songs/undercontrol.flac" type = "audio/flac">
+                </audio>
+                <button id="play-pause" onclick="toggleMusic()">
+                    <img id="play-icon" src="assets/voldown.png" alt="Play">
+                </button>
+            </div>
+            <br>
             <h1> about the author </h1>
             <div class="parent">
                     <p> 
@@ -64,15 +74,19 @@
                     <p>
                     <strong>name:</strong> zuri
                     <br>
+                    <strong>job:</strong> swe intern @ john deere
+                    <br>
+                    <strong>school:</strong> nc a&t state university (aggie pride)
+                    <br>
                     <strong>location:</strong> greensboro mostly charlotte sometimes
                     <br>
                     <strong>sign:</strong> scorpio sun, aquarius moon, taurus rising
                     <br>
-                    <strong>favorite colors:</strong> sky blue, green
+                    <strong>favorite colors:</strong> sky blue, all greens
                     <br>
                     <strong>favorite app:</strong> pinterest
                     <br>
-                    <strong>hobbies:</strong> creating, media, being outside, collecting records, sharing opinions, 
+                    <strong>hobbies:</strong> creating, hiking, bike riding, communing with nature, drawing, exploring, listening to music
                     <br>
                     <strong>craving:</strong> trader joe's takis
                     </p>  
@@ -80,9 +94,9 @@
             </div>
             <div class="about-paragraph">
                 <p>
-                    hey im zuri! right now, i happen to be super into web dev and have also been trying to 
-                    make a project portfolio to show off my works, so i guess that's what this is supposed to be. 
-                    i'm really into learning, creating, and exploring, and i think that this site is a good way to do all three.
+                    <strong>hey im zuri!</strong> this is my digital palate cleanser, a creative outlet of sorts. i've always been artistic by nature, and 
+                    this is a great way to bridge the gap between my hobbies and also to explore coding as an art form. there's a little bit of 
+                    everything here, but of course new features/things are always being added so it will grow as i do. 
                     this site is supposed to serve as a hub for all of my projects, coding and otherwise. i hope you enjoy your time here :)
                 </p>
             </div>

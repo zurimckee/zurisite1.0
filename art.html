@@ -46,17 +46,23 @@
         <div class="fade-in">
             <br>
             <style>
-                h2{
+                h2 {
                     border-radius: 12px;
                     text-align: center;
-                    color: #666D96;
                     width: 450px;
                     height: 65px;
-                    padding-top: 13px;
                     margin: auto;
-                    font-size: 25px;
-                    text-decoration: underline;}
+                    text-decoration: underline;
+                    }
             </style>
+            <div class="music-player">
+                <audio id="music" autoplay muted loop>
+                    <source src="assets/songs/amphetamine.flac" type = "audio/flac">
+                </audio>
+                <button id="play-pause" onclick="toggleMusic()">
+                    <img id="play-icon" src="assets/voldown.png" alt="Play">
+                </button>
+            </div>
             <h2> art and whatnot </h2>
             
             <br>

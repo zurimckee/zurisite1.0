@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
     <header>
@@ -53,7 +53,7 @@
                     color: #666D96;
                     font-size: 24px;
                     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                    font-style: oblique;
+                    /*font-style: oblique;*/
                     text-decoration: underline;
                 }
 
@@ -64,6 +64,14 @@
                     color: #7878A2;
                 }
             </style>
+            <div class="music-player">
+                <audio id="music" autoplay muted loop>
+                    <source src="assets/songs/betterwtime.flac" type = "audio/flac">
+                </audio>
+                <button id="play-pause" onclick="toggleMusic()">
+                    <img id="play-icon" src="assets/voldown.png" alt="Play">
+                </button>
+            </div>
 
             <h1> site log </h1>
             <br>
@@ -71,7 +79,7 @@
             <div class="log-container">
                 <div class="log-title">
                 </div>
-                <div class="log-content">   
+                <div class="log-content" >   
                     <p>  
                         <small>03.15.2025</small><br>
                         i want to leave this damn workshop so bad it's not even funny - also first log hello world!!
@@ -187,15 +195,16 @@
                         <small>05.24.2026</small><br>
                         worked on this during work i was bored, added a guestbook and some of my new projects. i want the folders on the landing page to move!!!!
                     </p>
+                    <hr>
+                    <p>
+                        <small>06.6.2026</small><br>
+                        started feeling like i wanted to either change my major or just say fk it and start my life of crime so i decided to work on the site instead. i added a music player with custom icons its so cute, each page
+                        plays a different song! also changed up my schpiel on the about page cuz it was old, i like this version much better, its more fitting to the vibe of the site. lastly i had some bugs in the log so i fixed that.
+                        gonna do some more stuff tomorrow.
+                    </p>
                 </div>
             </div>
         </div>
-        <!--reverses journal entries-->
-        <script>
-            const logContent = document.querySelector('.log-content');
-            const entries = Array.from(logContent.querySelectorAll('p, hr'));
-            logContent.innerHTML = ''; // Clear current content
-            entries.reverse().forEach(entry => logContent.appendChild(entry)); // Append in reverse order
-        </script>
+        <script src="script.js"> </script>
     </body>
 </html>
