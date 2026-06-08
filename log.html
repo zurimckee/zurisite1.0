@@ -69,7 +69,7 @@
                     <source src="assets/songs/betterwtime.flac" type = "audio/flac">
                 </audio>
                 <button id="play-pause" onclick="toggleMusic()">
-                    <img id="play-icon" src="assets/voldown.png" alt="Play">
+                    <img can-move id="play-icon" src="assets/voldown.png" alt="Play">
                 </button>
             </div>
 
@@ -202,9 +202,19 @@
                         plays a different song! also changed up my schpiel on the about page cuz it was old, i like this version much better, its more fitting to the vibe of the site. lastly i had some bugs in the log so i fixed that.
                         gonna do some more stuff tomorrow.
                     </p>
+                    <hr>
+                    <p>
+                        <small>06.7.2026</small><br>
+                        made the folders, art pics, and music icons draggable, added a typing feature to the about page (but gotta figure out how to speed that up) probs gonna implement that
+                        island react stuff in the future and also find a cool dynamic background/gif, and draw a cursor. also look at more portfolios for inspo. and add more art pics
+                    </p>
                 </div>
             </div>
         </div>
         <script src="script.js"> </script>
+        <script type="module">
+            import { playhtml } from "https://unpkg.com/playhtml";
+            playhtml.init();
+        </script>
     </body>
 </html>

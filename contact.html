@@ -61,7 +61,7 @@
                     <source src="assets/songs/cugirl.flac" type = "audio/flac">
                 </audio>
                 <button id="play-pause" onclick="toggleMusic()">
-                    <img id="play-icon" src="assets/voldown.png" alt="Play">
+                    <img can-move id="play-icon" src="assets/voldown.png" alt="Play">
                 </button>
             </div>
             <h1>socials</h1>
@@ -99,5 +99,9 @@
             </div>
         </div>
         <script src="script.js"></script>
+        <script type="module">
+            import { playhtml } from "https://unpkg.com/playhtml";
+            playhtml.init();
+        </script>
     </body>
 </html>

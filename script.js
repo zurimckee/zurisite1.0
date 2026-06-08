@@ -26,3 +26,4 @@ function toggleMusic(){
 }
 
 logContent();
+

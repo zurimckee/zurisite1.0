@@ -61,7 +61,7 @@
                     <source src="assets/songs/undercontrol.flac" type = "audio/flac">
                 </audio>
                 <button id="play-pause" onclick="toggleMusic()">
-                    <img id="play-icon" src="assets/voldown.png" alt="Play">
+                    <img can-move id="play-icon" src="assets/voldown.png" alt="Play">
                 </button>
             </div>
             <br>
@@ -102,5 +102,24 @@
             </div>
         </div>    
         <script src="script.js"></script>
+        <script type="module">
+            import { playhtml } from "https://unpkg.com/playhtml";
+            playhtml.init();
+        </script>
+        <script>
+            const text = document.querySelector('.about-paragraph p')
+            const fullText = text.textContent
+            text.textContent = ''
+
+            let i = 0
+            const type = () => {
+            if (i < fullText.length) {
+                text.textContent += fullText[i]
+                i++
+                setTimeout(type, 30 + Math.random() * 60)
+            }
+            }
+            type()
+        </script>
     </body>
 </html>

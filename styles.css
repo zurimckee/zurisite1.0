@@ -376,7 +376,7 @@ hr{
 }
 
 .menu-links{
-    position: absolute;
+    position: fixed;
     top: 100%;
     right: 0;
     background-color: #FAF2E9;
