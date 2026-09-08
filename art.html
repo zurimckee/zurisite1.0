@@ -67,16 +67,106 @@
             
             <br>
             
-            <div class="art-dividers">
-                <img can-move src="assets/art/soulgreen.png" width="1224" height="635" alt="" class="img-style2">
-                <img can-move src="assets/art/art2.jpg" width="1224" height="635" alt="" class="img-style2">
-                <img can-move src="assets/art/zwh.png" width="1224" height="635" alt="" class="img-style2">
+            <div class="masonry">
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/art2.jpg"/>
+                </div>
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/soulgreen.png"/>
+                </div>
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/zwh.png"/>
+                </div>
+                <div class="frame" style="--width: 2; --height: 1;">
+                    <img src="assets/art/lover.png"/>
+                </div>
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/shapessoul.png"/>
+                </div>
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/soulheatseek.png"/>
+                </div>
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/zuritag.png"/>
+                </div>
+                <div class="frame" style="--width: 4; --height: 4;">
+                    <img src="assets/art/boom.png"/>
+                </div>
+                <div class="frame" style="--width: 2; --height: 4;">
+                    <img src="assets/art/sillybanana.png"/>
+                </div>
+                <div class="frame" style="--width: 3; --height: 3;">
+                    <img src="assets/art/lovehand.png"/>
+                </div>
+                <div class="frame" style="--width: 3; --height: 3;">
+                    <img src="assets/art/hatehand.png"/>
+                </div>
+                <div class="frame" style="--width: 2; --height: 2;">
+                    <img src="assets/art/luna.png"/>
+                </div>
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/r.png"/>
+                </div>
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/soultree.png"/>
+                </div>
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/art3.png"/>
+                </div>      
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/blueabstract.png"/>
+                </div> 
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/jamrock.png"/>
+                </div>         
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/greenabstract.png"/>
+                </div>           
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/middlefingdood.png"/>
+                </div>    
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/bluenice.png"/>
+                </div>
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/swirlysoul.png"/>
+                </div>  
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/flowerboard.png"/>
+                </div>     
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/art4.png"/>
+                </div>      
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/art5.png"/>
+                </div>   
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/echo.png"/>
+                </div>
+                <div class="frame" style="--width: 3; --height: 4;">
+                    <img src="assets/art/hands.png"/>
+                </div>   
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/static.png"/>
+                </div>       
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/greenspikesoul.png"/>
+                </div>       
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/heartsoul.png"/>
+                </div> 
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/nike.png"/>
+                </div> 
+                <div class="frame" style="--width: 1; --height: 1;">
+                    <img src="assets/art/mahalo.png"/>
+                </div>                 
             </div>
         </div>
         <script src="script.js"></script>
         <script type="module">
-            import { playhtml } from "https://unpkg.com/playhtml";
-            playhtml.init();
+            import { BalancedMasonryGrid } from 'https://cdn.skypack.dev/@masonry-grid/vanilla'
+            new BalancedMasonryGrid(document.querySelector('.masonry'));
         </script>
     </body>
 </html>

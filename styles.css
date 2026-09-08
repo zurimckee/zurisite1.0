@@ -803,3 +803,26 @@ button:hover{
     cursor: pointer;
     display: block;
 }
+
+.masonry {
+    /* Required styles */
+    display: grid;
+    overflow: hidden;
+    gap: 10px; /* optional, but looks better */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+}
+
+.frame {
+    /* Required styles */
+    position: relative; /* make frame position relative */
+    aspect-ratio: var(--width) / var(--height);
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
