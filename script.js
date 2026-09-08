@@ -1,4 +1,5 @@
 
+
 function logContent(){
     const logContent = document.querySelector('.log-content');
     const entries = Array.from(logContent.querySelectorAll('p, hr'));
