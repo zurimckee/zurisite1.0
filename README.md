@@ -1,6 +1,5 @@
 ## portfolio site version 1.5
-### check it out! 
-[zurisite 1.5](https://projbyzuri.netlify.app/)
+[check it out!](https://projbyzuri.netlify.app/)
 
 <img width="1815" height="780" alt="image" src="https://github.com/user-attachments/assets/a51131ae-2afc-4202-9831-79536486cd94" />
 
